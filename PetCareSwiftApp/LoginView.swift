@@ -62,7 +62,7 @@ struct AppContentView: View {
     var body: some View {
         return Group {
             if signInSuccess {
-                AllPetsView()
+                AppHomeView()
             }
             else {
                 LoginView(signInSuccess: $signInSuccess)
