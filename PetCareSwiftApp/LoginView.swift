@@ -7,8 +7,14 @@
 
 import SwiftUI
 
+struct LoginResponseJson : Codable {
+    let refresh : String
+    let access : String
+}
+
 func login(username : String, password : String) -> Bool
 {
+    let defaults = UserDefaults.standard
     
     let url = URL(string :K.URL.login_url)!
     
@@ -31,7 +37,24 @@ func login(username : String, password : String) -> Bool
         if let httpResponse = response as? HTTPURLResponse {
                 print("statusCode: \(httpResponse.statusCode)")
             response_code = httpResponse.statusCode
+            
             }
+        let decoder = JSONDecoder()
+
+
+
+                do {
+
+                    let data_decode = try decoder.decode(LoginResponseJson.self, from: data!)
+                    
+                    print("jwt Acces code:  \(data_decode.access)")
+                    defaults.set(data_decode.access,forKey: DefaultsKeys.keyOne)
+                    print("jwt token set in default keys")
+                } catch {
+
+                    print(error.localizedDescription)
+
+                }
         
     }
     
@@ -62,7 +85,7 @@ struct AppContentView: View {
     var body: some View {
         return Group {
             if signInSuccess {
-                AppHomeView()
+                ListView()
             }
             else {
                 LoginView(signInSuccess: $signInSuccess)
