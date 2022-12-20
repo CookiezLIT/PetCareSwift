@@ -14,6 +14,7 @@
 		40872834295216CB00B30EBE /* PetCareSwiftAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40872833295216CB00B30EBE /* PetCareSwiftAppTests.swift */; };
 		4087283E295216CB00B30EBE /* PetCareSwiftAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087283D295216CB00B30EBE /* PetCareSwiftAppUITests.swift */; };
 		40872840295216CB00B30EBE /* PetCareSwiftAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087283F295216CB00B30EBE /* PetCareSwiftAppUITestsLaunchTests.swift */; };
+		4087284D2952200F00B30EBE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087284C2952200F00B30EBE /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		40872839295216CB00B30EBE /* PetCareSwiftAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetCareSwiftAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4087283D295216CB00B30EBE /* PetCareSwiftAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCareSwiftAppUITests.swift; sourceTree = "<group>"; };
 		4087283F295216CB00B30EBE /* PetCareSwiftAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCareSwiftAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4087284C2952200F00B30EBE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				40872825295216CB00B30EBE /* Assets.xcassets */,
 				40872827295216CB00B30EBE /* PetCareSwiftApp.entitlements */,
 				40872828295216CB00B30EBE /* Preview Content */,
+				4087284C2952200F00B30EBE /* Constants.swift */,
 			);
 			path = PetCareSwiftApp;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				40872824295216CA00B30EBE /* ContentView.swift in Sources */,
 				40872822295216CA00B30EBE /* PetCareSwiftAppApp.swift in Sources */,
+				4087284D2952200F00B30EBE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
