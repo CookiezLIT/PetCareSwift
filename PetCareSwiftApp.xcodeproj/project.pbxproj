@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		40872822295216CA00B30EBE /* PetCareSwiftAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40872821295216CA00B30EBE /* PetCareSwiftAppApp.swift */; };
-		40872824295216CA00B30EBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40872823295216CA00B30EBE /* ContentView.swift */; };
+		40872824295216CA00B30EBE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40872823295216CA00B30EBE /* LoginView.swift */; };
 		40872826295216CB00B30EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40872825295216CB00B30EBE /* Assets.xcassets */; };
 		4087282A295216CB00B30EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40872829295216CB00B30EBE /* Preview Assets.xcassets */; };
 		40872834295216CB00B30EBE /* PetCareSwiftAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40872833295216CB00B30EBE /* PetCareSwiftAppTests.swift */; };
 		4087283E295216CB00B30EBE /* PetCareSwiftAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087283D295216CB00B30EBE /* PetCareSwiftAppUITests.swift */; };
 		40872840295216CB00B30EBE /* PetCareSwiftAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087283F295216CB00B30EBE /* PetCareSwiftAppUITestsLaunchTests.swift */; };
 		4087284D2952200F00B30EBE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087284C2952200F00B30EBE /* Constants.swift */; };
+		4087284F29522F5900B30EBE /* AllPetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087284E29522F5900B30EBE /* AllPetsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,7 @@
 /* Begin PBXFileReference section */
 		4087281E295216CA00B30EBE /* PetCareSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetCareSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40872821295216CA00B30EBE /* PetCareSwiftAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCareSwiftAppApp.swift; sourceTree = "<group>"; };
-		40872823295216CA00B30EBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		40872823295216CA00B30EBE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		40872825295216CB00B30EBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40872827295216CB00B30EBE /* PetCareSwiftApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PetCareSwiftApp.entitlements; sourceTree = "<group>"; };
 		40872829295216CB00B30EBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		4087283D295216CB00B30EBE /* PetCareSwiftAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCareSwiftAppUITests.swift; sourceTree = "<group>"; };
 		4087283F295216CB00B30EBE /* PetCareSwiftAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCareSwiftAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4087284C2952200F00B30EBE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4087284E29522F5900B30EBE /* AllPetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPetsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				40872821295216CA00B30EBE /* PetCareSwiftAppApp.swift */,
-				40872823295216CA00B30EBE /* ContentView.swift */,
+				40872823295216CA00B30EBE /* LoginView.swift */,
 				40872825295216CB00B30EBE /* Assets.xcassets */,
 				40872827295216CB00B30EBE /* PetCareSwiftApp.entitlements */,
 				40872828295216CB00B30EBE /* Preview Content */,
 				4087284C2952200F00B30EBE /* Constants.swift */,
+				4087284E29522F5900B30EBE /* AllPetsView.swift */,
 			);
 			path = PetCareSwiftApp;
 			sourceTree = "<group>";
@@ -262,7 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40872824295216CA00B30EBE /* ContentView.swift in Sources */,
+				4087284F29522F5900B30EBE /* AllPetsView.swift in Sources */,
+				40872824295216CA00B30EBE /* LoginView.swift in Sources */,
 				40872822295216CA00B30EBE /* PetCareSwiftAppApp.swift in Sources */,
 				4087284D2952200F00B30EBE /* Constants.swift in Sources */,
 			);

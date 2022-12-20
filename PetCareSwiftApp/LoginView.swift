@@ -10,13 +10,6 @@ import SwiftUI
 func login(username : String, password : String) -> Bool
 {
     
-    //set the login data
-    let loginString = String(format: "%@:%@", username, password)
-    let loginData = loginString.data(using: String.Encoding.utf8)!
-    let base64LoginString = loginData.base64EncodedString()
-    
-    
-    
     let url = URL(string :K.URL.login_url)!
     
     var request = URLRequest(url : url)
@@ -53,20 +46,39 @@ func login(username : String, password : String) -> Bool
         return false
     }
     if response_code == 200{
+        
         return true
     }
     
     
-    return true
+    return false
 }
 
 
-struct ContentView: View {
+struct AppContentView: View {
+    
+    @State var signInSuccess = false
+    
+    var body: some View {
+        return Group {
+            if signInSuccess {
+                AllPetsView()
+            }
+            else {
+                LoginView(signInSuccess: $signInSuccess)
+            }
+        }
+    }
+}
+
+struct LoginView: View {
     
     @State private var username: String = ""
     @State private var password: String = ""
     
     var lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
+    
+    @Binding var signInSuccess : Bool
     
     var body: some View {
         NavigationView {
@@ -83,20 +95,26 @@ struct ContentView: View {
                     .cornerRadius(80.0)
                     .padding(.bottom,20)
                     .autocapitalization(.none)
-                Button(action : {login(username: username, password: password)}){
+                Button(action : {
+                    signInSuccess = login(username: username, password: password)
+                }){
                     Text("Sign In")
                 }
+                
             }
             .navigationTitle("Login")
             .padding()
         }
+        
     }
+    
+    
 }
 
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AppContentView()
     }
 }
