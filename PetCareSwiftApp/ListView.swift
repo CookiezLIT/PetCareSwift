@@ -12,20 +12,24 @@ struct ListView: View {
     @StateObject var vm = PetViewModel()
     
     var body: some View {
-        Text("HALLOOO")
-        List {
-            ForEach(vm.pets) {
-                pet in HStack{
-                    Text("\(pet.name)")
+        //NavigationView {
+            Text("Pets")
+        NavigationView{
+            List {
+                ForEach(vm.pets) {
+                    pet in HStack{
+                        NavigationLink(destination: DetailView() ){
+                            Text("\(pet.name)")
+                        }
+                    }
                 }
             }
-        }
-        .task{
-            await vm.getPets()
+            .task{
+                await vm.getPets()
+            }
         }
     }
 }
-
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
         ListView()

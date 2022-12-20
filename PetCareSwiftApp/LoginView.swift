@@ -49,7 +49,7 @@ func login(username : String, password : String) -> Bool
                     
                     print("jwt Acces code:  \(data_decode.access)")
                     defaults.set(data_decode.access,forKey: DefaultsKeys.keyOne)
-                    print("jwt token set in default keys")
+                    print("jwt token saved in local storage")
                 } catch {
 
                     print(error.localizedDescription)
