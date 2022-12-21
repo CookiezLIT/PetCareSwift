@@ -12,7 +12,7 @@ enum APIError : Error{
 }
 
 let get_pets_url = K.URL.get_pets
-
+let get_pet_url = K.URL.get_pet
 
 struct APIService {
     
@@ -49,5 +49,6 @@ struct APIService {
         
         return result
     }
+    
     
 }
