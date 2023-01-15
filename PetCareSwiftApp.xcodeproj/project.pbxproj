@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		404E411A2974A2D100C7F779 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E41192974A2D100C7F779 /* NotificationManager.swift */; };
 		40567AA129525C0300A7B62E /* PetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40567AA029525C0300A7B62E /* PetModel.swift */; };
 		40567AA329525CAF00A7B62E /* PetApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40567AA229525CAF00A7B62E /* PetApiService.swift */; };
 		40567AA529525E3500A7B62E /* PetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40567AA429525E3500A7B62E /* PetViewModel.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		404E41192974A2D100C7F779 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		40567AA029525C0300A7B62E /* PetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetModel.swift; sourceTree = "<group>"; };
 		40567AA229525CAF00A7B62E /* PetApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetApiService.swift; sourceTree = "<group>"; };
 		40567AA429525E3500A7B62E /* PetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewModel.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				40567AA62952614000A7B62E /* LocalStorage.swift */,
 				40567AA829526CCA00A7B62E /* DetailView.swift */,
 				4079231A2953562C00436EDF /* PetDetailViewModel.swift */,
+				404E41192974A2D100C7F779 /* NotificationManager.swift */,
 			);
 			path = PetCareSwiftApp;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				40567AA329525CAF00A7B62E /* PetApiService.swift in Sources */,
 				40567AA529525E3500A7B62E /* PetViewModel.swift in Sources */,
 				40872822295216CA00B30EBE /* PetCareSwiftAppApp.swift in Sources */,
+				404E411A2974A2D100C7F779 /* NotificationManager.swift in Sources */,
 				40567AA72952614000A7B62E /* LocalStorage.swift in Sources */,
 				40567AA129525C0300A7B62E /* PetModel.swift in Sources */,
 				4087284D2952200F00B30EBE /* Constants.swift in Sources */,

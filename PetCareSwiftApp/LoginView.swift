@@ -14,6 +14,9 @@ struct LoginResponseJson : Codable {
 
 func login(username : String, password : String) -> Bool
 {
+    //request authorization for notifications
+    
+    
     let defaults = UserDefaults.standard
     
     let url = URL(string :K.URL.login_url)!
@@ -119,6 +122,7 @@ struct LoginView: View {
                     .padding(.bottom,20)
                     .autocapitalization(.none)
                 Button(action : {
+                    NotificationManager.instance.requestAuthorization()
                     signInSuccess = login(username: username, password: password)
                 }){
                     Text("Sign In")
@@ -127,6 +131,9 @@ struct LoginView: View {
             }
             .navigationTitle("Login")
             .padding()
+            .onAppear {
+                UIApplication.shared.applicationIconBadgeNumber = 0
+            }
         }
         
     }

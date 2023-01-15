@@ -20,7 +20,11 @@ struct APIService {
     
     
     func getPets () async throws -> [Pet]{
-            
+        
+        //send notifications if fetch api is ok
+        
+        
+        
         let jwtToken = defaults.string(forKey : DefaultsKeys.keyOne)
         
         
@@ -46,6 +50,9 @@ struct APIService {
             print("decoding error")
             throw APIError.decodingError
         }
+        
+        
+        
         
         return result
     }

@@ -73,7 +73,7 @@ enum IsAdopted : String, CaseIterable, Identifiable{
 }
 
 
-func post_pet(pet_id : Int, name : String, age_string : String){
+func post_pet(pet_id : Int, name : String, age_string : String) -> Bool{
     
     let defaults = UserDefaults.standard
 
@@ -110,7 +110,13 @@ func post_pet(pet_id : Int, name : String, age_string : String){
     
     print("Response status code for post_pet request:")
     print(response_code)
-
+    
+    if (response_code == 200){
+        return true
+    }
+    else{
+        return false
+    }
     
 }
 
@@ -119,6 +125,7 @@ struct EditPetView : View{
     @State var name : String = ""
     @State var is_adopted : IsAdopted = .True
     @State var age_string : String = ""
+    @State var data_fetched : Bool = false
     var body: some View{
         VStack{
             
@@ -141,7 +148,19 @@ struct EditPetView : View{
             
             //button with action to do post request
             Button(action: {
-                post_pet(pet_id: pet_id, name: name, age_string: age_string)
+                
+                data_fetched = post_pet(pet_id: pet_id, name: name, age_string: age_string)
+                if (data_fetched){
+                    NotificationManager.instance.sendNotification(title: "Pet added to the server", message: "Pet data send to the server")
+                    
+                }
+                else{
+                    NotificationManager.instance.sendNotification(title: "Pet saved locally", message: "Pet data could not be sent to the server")
+                }
+                        
+                
+                
+                
                 
             }){
                 Text("Update Pet")

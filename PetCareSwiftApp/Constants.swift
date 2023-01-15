@@ -16,6 +16,7 @@ struct K {
         static let post_pet = "http://127.0.0.1:8000/pets/add_pet/"
         static let put_pet = "http://127.0.0.1:8000/pets/update_pet/"
         static let delete_pet = ""
+        static let net_status = "http://127.0.0.1:8000/net_status/"
     }
     
 }
