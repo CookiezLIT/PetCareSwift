@@ -18,7 +18,7 @@ struct ListView: View {
             List {
                 ForEach(vm.pets) {
                     pet in HStack{
-                        NavigationLink(destination: DetailView(pet_id : pet.id) ){
+                        NavigationLink(destination: PetDetailContentView(pet_id : pet.id) ){
                             Text("\(pet.name)")
                         }
                     }
